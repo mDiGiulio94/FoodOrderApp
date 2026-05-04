@@ -2,7 +2,7 @@ import { currencyFormatter } from "../utils/fomratting";
 import Buttons from "./UI/Buttons";
 import { useContext } from "react";
 import CartContext from "../store/CartContext";
-export default function MealItem({key, meal}){
+export default function MealItem({idMeal, meal}){
 
     const cartContext = useContext(CartContext);
 
@@ -12,7 +12,7 @@ export default function MealItem({key, meal}){
 
     return (
 <>
-  <li key={key} className="meal-item">
+  <li key={idMeal} className="meal-item">
           <article>
             <img src={`http://localhost:3000/${meal.image}`} alt={meal.name} />
             <div>
